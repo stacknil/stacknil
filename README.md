@@ -1,4 +1,4 @@
-Security-leaning systems learner. Interests: Linux internals, network security, applied cryptography, and secure software engineering. Background in scientific computing & spatiotemporal data.
+Security-minded systems learner with a scientific computing background, aiming for EU-based study/work and remote-capable roles.
 
 Focus: Systems Security / Cloud Security / Secure Software Engineering
 
