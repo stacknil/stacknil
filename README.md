@@ -17,18 +17,15 @@ I build small, practical projects around systems, security, automation, and stru
 - building small finished tools
 - preparing for IELTS Academic and 2027 applications
 
-### Featured project: LogLens
+## Featured project
 
-[LogLens](https://github.com/stacknil/loglens) is a C++20 defensive log analysis CLI for Linux authentication logs.
+### LogLens
+C++20 defensive log analysis CLI for Linux authentication logs.
 
-It focuses on:
+- parses both legacy syslog and `journalctl --output=short-full` input
+- normalizes authentication evidence before detection
+- reports suspicious login activity in Markdown and JSON
+- surfaces parser coverage and unknown-line accounting
+- ships with CI, CodeQL, and hardened GitHub workflows
 
-- auth log parsing across `syslog` and `journalctl` styles
-- normalized authentication-evidence modeling
-- rule-based suspicious login detection
-- parser coverage telemetry and unknown-line accounting
-- CI, CodeQL, and repository hardening
-
-This repo represents my current direction at the intersection of systems, telemetry, and defensive security engineering.
-
-Related axis: telemetry-lab × security-labs
+Repo: [stacknil/LogLens](https://github.com/stacknil/LogLens)
