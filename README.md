@@ -1,6 +1,6 @@
 # stacknil
 
-Security-minded systems builder working on telemetry, defensive tooling, automation, and trustworthy AI-assisted workflows.
+Security-minded systems builder working on telemetry, monitoring, defensive tooling, automation, and constrained AI-assisted workflows.
 
 ## What I do
 
@@ -12,7 +12,7 @@ My current direction is shaped around:
 - detection-oriented security engineering
 - telemetry, monitoring, and signal processing
 - public-safe technical writing and sanitized security notes
-- AI-assisted workflows with explicit human verification and scope boundaries
+- AI-assisted workflows with explicit human verification, scope boundaries, and no autonomous response claims
 
 ## Selected Work
 
@@ -26,12 +26,14 @@ C++20 defensive log analysis CLI for Linux authentication logs.
 - includes CI, CodeQL, and repository hardening
 
 ### [telemetry-lab](https://github.com/stacknil/telemetry-lab)
-Small telemetry and monitoring prototypes for detection-oriented workflows.
+A four-demo public repository for deterministic, reviewable, local file-based telemetry and detection workflows.
 
-- builds sliding-window features from timestamped event streams
-- generates alerts, summaries, and reusable local demo outputs
-- explores the bridge between logs, signals, and security operations
-- keeps scope explicit: prototype-first, reproducible, inspectable
+- `telemetry-window-demo`: sliding-window telemetry analytics and rule-based alerts
+- `ai-assisted-detection-demo`: deterministic detection and grouping with constrained LLM summarization
+- `rule-evaluation-and-dedup-demo`: before/after dedup, cooldown behavior, and suppression reasons
+- `config-change-investigation-demo`: risky config changes with bounded evidence correlation
+- latest milestone: [`v0.6.0`](https://github.com/stacknil/telemetry-lab/releases/tag/v0.6.0)
+- reviewer packs: [`ai-assisted-detection-demo`](https://github.com/stacknil/telemetry-lab/releases/download/v0.4.0/telemetry-lab-reviewer-pack-v0.4.0.zip) and [`config-change-investigation-demo`](https://github.com/stacknil/telemetry-lab/releases/download/v0.6.0/telemetry-lab-reviewer-pack-v0.6.0.zip)
 
 ### [sec-writeups-public](https://github.com/stacknil/sec-writeups-public)
 Public, sanitized security write-ups from authorized labs and training platforms.
