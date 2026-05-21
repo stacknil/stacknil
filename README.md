@@ -1,67 +1,51 @@
 # stacknil
 
-Security-minded systems builder working on telemetry, monitoring, defensive tooling, automation, and constrained AI-assisted workflows.
+Systems, telemetry, defensive tooling, and reviewable security artifacts.
 
-## What I do
+I build small public repositories that are intentionally narrow, reproducible, and easy for a reviewer to inspect without guessing at hidden scope.
 
-I build small, practical projects that sit between systems, security, and operational data.
+Current direction:
 
-My current direction is shaped around:
+- systems foundations that make later telemetry and security work legible
+- monitoring and detection-oriented tooling
+- deterministic local workflows over black-box demos
+- public-safe security writing with explicit boundaries
 
-- Linux, networking, and core systems understanding
-- detection-oriented security engineering
-- telemetry, monitoring, and signal processing
-- public-safe technical writing and sanitized security notes
-- AI-assisted workflows with explicit human verification, scope boundaries, and no autonomous response claims
+## Portfolio Map
 
-## Selected Work
+| Repo | Primary signal | Start here |
+| --- | --- | --- |
+| [LogLens](https://github.com/stacknil/LogLens) | C++20 defensive log analysis for Linux auth evidence, with parser coverage telemetry and deterministic reports | [README](https://github.com/stacknil/LogLens/blob/main/README.md) · [reviewer brief](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-brief.md) |
+| [telemetry-lab](https://github.com/stacknil/telemetry-lab) | reviewable telemetry and detection demos: windowing, dedup, bounded AI-assisted case drafting, and config-change investigation | [README](https://github.com/stacknil/telemetry-lab/blob/main/README.md) · [reviewer brief](https://github.com/stacknil/telemetry-lab/blob/main/docs/reviewer-brief.md) |
+| [repo-sentinel-lite](https://github.com/stacknil/repo-sentinel-lite) | deterministic repository hygiene and lightweight secret-adjacent scanning with baselines and pre-commit integration | [README](https://github.com/stacknil/repo-sentinel-lite/blob/main/README.md) · [reviewer brief](https://github.com/stacknil/repo-sentinel-lite/blob/main/docs/reviewer-brief.md) |
+| [scientific-computing-toolkit](https://github.com/stacknil/scientific-computing-toolkit) | scientific and supply-chain review infrastructure, currently led by `sbom-diff-and-risk` | [README](https://github.com/stacknil/scientific-computing-toolkit/blob/main/README.md) · [reviewer brief](https://github.com/stacknil/scientific-computing-toolkit/blob/main/docs/reviewer-brief.md) |
+| [systems-foundations](https://github.com/stacknil/systems-foundations) | Linux auth and networking state mini-labs with deterministic normalization and report artifacts | [README](https://github.com/stacknil/systems-foundations/blob/main/README.md) · [reviewer brief](https://github.com/stacknil/systems-foundations/blob/main/docs/reviewer-brief.md) |
+| [sec-writeups-public](https://github.com/stacknil/sec-writeups-public) | sanitized security notes and reviewer-friendly publication governance | [README](https://github.com/stacknil/sec-writeups-public/blob/main/README.md) · [reviewer brief](https://github.com/stacknil/sec-writeups-public/blob/main/docs/reviewer-brief.md) |
 
-### [LogLens](https://github.com/stacknil/LogLens)
-C++20 defensive log analysis CLI for Linux authentication logs.
+## What Ties These Repos Together
 
-- parses both legacy syslog and `journalctl --output=short-full` style input
-- normalizes authentication evidence before detection
-- applies configurable rule-based detections
-- emits deterministic Markdown and JSON reports
-- includes CI, CodeQL, and repository hardening
+- systems -> telemetry -> security is the main technical arc
+- outputs should be inspectable by a human, not just runnable once
+- documentation is part of the artifact, not cleanup after the artifact
+- defensive scope and explicit boundaries matter more than inflated claims
 
-### [telemetry-lab](https://github.com/stacknil/telemetry-lab)
-A four-demo public repository for deterministic, reviewable, local file-based telemetry and detection workflows.
+## Reviewer Shortcut
 
-- `telemetry-window-demo`: sliding-window telemetry analytics and rule-based alerts
-- `ai-assisted-detection-demo`: deterministic detection and grouping with constrained LLM summarization
-- `rule-evaluation-and-dedup-demo`: before/after dedup, cooldown behavior, and suppression reasons
-- `config-change-investigation-demo`: risky config changes with bounded evidence correlation
-- latest milestone: [`v0.6.0`](https://github.com/stacknil/telemetry-lab/releases/tag/v0.6.0)
-- reviewer packs: [`ai-assisted-detection-demo`](https://github.com/stacknil/telemetry-lab/releases/download/v0.4.0/telemetry-lab-reviewer-pack-v0.4.0.zip) and [`config-change-investigation-demo`](https://github.com/stacknil/telemetry-lab/releases/download/v0.6.0/telemetry-lab-reviewer-pack-v0.6.0.zip)
+If you only have a few minutes:
 
-### [sec-writeups-public](https://github.com/stacknil/sec-writeups-public)
-Public, sanitized security write-ups from authorized labs and training platforms.
+1. Start with [telemetry-lab](https://github.com/stacknil/telemetry-lab/blob/main/docs/reviewer-brief.md) for the clearest monitoring / detection story.
+2. Read [LogLens](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-brief.md) for the strongest C++ defensive-tooling signal.
+3. Read [repo-sentinel-lite](https://github.com/stacknil/repo-sentinel-lite/blob/main/docs/reviewer-brief.md) for repository hygiene and release discipline.
+4. Read [scientific-computing-toolkit](https://github.com/stacknil/scientific-computing-toolkit/blob/main/docs/reviewer-brief.md) for deterministic supply-chain review work.
 
-- focused on methodology, reasoning, and reusable patterns
-- designed for safe publication instead of copy-paste exploitation
-- organized as a maintainable public knowledge base
-- includes publication boundaries and sanitization rules
+## Writing
 
-## Current Focus
-
-- building finished defensive / telemetry-oriented tools
-- strengthening Linux and networking depth
-- improving public project presentation and documentation quality
-- preparing an English-first technical portfolio for international applications
-
-## Working Style
-
-- clear scope over inflated claims
-- reproducibility over demos that only work once
-- defensive and public-safe by default
-- documentation, testing, and repository hygiene matter
-
-## Notes
-
-Most repositories here are learning-driven engineering artifacts:
-small enough to finish, structured enough to review, and honest about their boundaries.
+- [telemetry-lab / design notes](https://github.com/stacknil/telemetry-lab/blob/main/docs/design-notes.md)
+- [systems-foundations / text processing pipelines](https://github.com/stacknil/systems-foundations/blob/main/notes/linux/text-processing-pipelines.md)
+- [sec-writeups-public / SOC Fundamentals](https://github.com/stacknil/sec-writeups-public/blob/main/notes/80-blue-team/soc-fundamentals.md)
 
 ## Contact
 
 - GitHub: [@stacknil](https://github.com/stacknil)
+- Site: [stacknil.github.io](https://stacknil.github.io/)
+- Email: [stacknil@proton.me](mailto:stacknil@proton.me)
