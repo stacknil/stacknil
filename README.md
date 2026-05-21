@@ -29,6 +29,12 @@ Current direction:
 - documentation is part of the artifact, not cleanup after the artifact
 - defensive scope and explicit boundaries matter more than inflated claims
 
+## Publishing Discipline
+
+Public repositories are treated as reviewable artifacts: sanitized inputs, explicit boundaries, deterministic outputs, tests where useful, and documentation that separates tool behavior from release or data claims.
+
+AI assistance may be used for implementation and documentation drafting, but public artifacts are reviewed through tests, deterministic outputs, explicit scope boundaries, and human-maintained release notes.
+
 ## Reviewer Shortcut
 
 If you only have 5 minutes:
