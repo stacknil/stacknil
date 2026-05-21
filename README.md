@@ -31,12 +31,12 @@ Current direction:
 
 ## Reviewer Shortcut
 
-If you only have a few minutes:
+If you only have 5 minutes:
 
-1. Start with [telemetry-lab](https://github.com/stacknil/telemetry-lab/blob/main/docs/reviewer-brief.md) for the clearest monitoring / detection story.
-2. Read [LogLens](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-brief.md) for the strongest C++ defensive-tooling signal.
-3. Read [repo-sentinel-lite](https://github.com/stacknil/repo-sentinel-lite/blob/main/docs/reviewer-brief.md) for repository hygiene and release discipline.
-4. Read [scientific-computing-toolkit](https://github.com/stacknil/scientific-computing-toolkit/blob/main/docs/reviewer-brief.md) for deterministic supply-chain review work.
+1. [telemetry-lab](https://github.com/stacknil/telemetry-lab/blob/main/docs/reviewer-brief.md) - detection workflow and bounded AI-assisted analyst drafting.
+2. [LogLens](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-brief.md) - C++20 Linux authentication log analysis with parser observability.
+3. [repo-sentinel-lite](https://github.com/stacknil/repo-sentinel-lite/blob/main/docs/reviewer-brief.md) - PyPI-published repository hygiene CLI with baselines and pre-commit support.
+4. [scientific-computing-toolkit](https://github.com/stacknil/scientific-computing-toolkit/blob/main/docs/reviewer-brief.md) - SBOM/dependency risk review plus supporting scientific-data diagnostics.
 
 ## Writing
 
