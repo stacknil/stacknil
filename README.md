@@ -35,6 +35,8 @@ Public repositories are treated as reviewable artifacts: sanitized inputs, expli
 
 AI assistance may be used for implementation and documentation drafting, but public artifacts are reviewed through tests, deterministic outputs, explicit scope boundaries, and human-maintained release notes.
 
+Near-term focus: stabilize review paths, tests, documentation boundaries, and release evidence rather than expanding project count.
+
 ## Reviewer Shortcut
 
 If you only have 5 minutes:
