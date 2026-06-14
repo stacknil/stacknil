@@ -41,8 +41,8 @@ Near-term focus: stabilize review paths, tests, documentation boundaries, and re
 
 If you only have 5 minutes:
 
-1. [telemetry-lab](https://github.com/stacknil/telemetry-lab/blob/main/docs/reviewer-brief.md) - detection workflow and bounded AI-assisted analyst drafting.
-2. [LogLens](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-brief.md) - C++20 Linux authentication log analysis with parser observability.
+1. [LogLens](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-brief.md) - C++20 Linux authentication log analysis with parser observability.
+2. [telemetry-lab](https://github.com/stacknil/telemetry-lab/blob/main/docs/reviewer-brief.md) - detection workflow and bounded AI-assisted analyst drafting.
 3. [repo-sentinel-lite](https://github.com/stacknil/repo-sentinel-lite/blob/main/docs/reviewer-brief.md) - PyPI-published repository hygiene CLI with baselines and pre-commit support.
 4. [scientific-computing-toolkit](https://github.com/stacknil/scientific-computing-toolkit/blob/main/docs/reviewer-brief.md) - SBOM/dependency risk review plus supporting scientific-data diagnostics.
 
