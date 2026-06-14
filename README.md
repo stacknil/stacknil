@@ -1,14 +1,13 @@
 # stacknil
 
-Systems, telemetry, defensive tooling, and reviewable security artifacts.
+I build small defensive systems tools for Linux evidence, telemetry workflows,
+repository hygiene, and reviewable security artifacts.
 
-I build small public repositories that are intentionally narrow, reproducible, and easy for a reviewer to inspect without guessing at hidden scope.
+Current focus:
 
-Current direction:
-
-- systems foundations that make later telemetry and security work legible
-- monitoring and detection-oriented tooling
-- deterministic local workflows over black-box demos
+- C++20 log analysis for Linux authentication evidence
+- deterministic local detection workflows
+- repository hygiene and lightweight secret-adjacent scanning
 - public-safe security writing with explicit boundaries
 
 ## Portfolio Map
@@ -41,10 +40,10 @@ Near-term focus: stabilize review paths, tests, documentation boundaries, and re
 
 If you only have 5 minutes:
 
-1. [LogLens](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-brief.md) - C++20 Linux authentication log analysis with parser observability.
-2. [telemetry-lab](https://github.com/stacknil/telemetry-lab/blob/main/docs/reviewer-brief.md) - detection workflow and bounded AI-assisted analyst drafting.
-3. [repo-sentinel-lite](https://github.com/stacknil/repo-sentinel-lite/blob/main/docs/reviewer-brief.md) - PyPI-published repository hygiene CLI with baselines and pre-commit support.
-4. [scientific-computing-toolkit](https://github.com/stacknil/scientific-computing-toolkit/blob/main/docs/reviewer-brief.md) - SBOM/dependency risk review plus supporting scientific-data diagnostics.
+1. [LogLens](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-brief.md) - C++20 Linux auth log analysis with parser observability.
+2. [telemetry-lab](https://github.com/stacknil/telemetry-lab/blob/main/docs/reviewer-brief.md) - deterministic detection workflow demos.
+3. [repo-sentinel-lite](https://github.com/stacknil/repo-sentinel-lite/blob/main/docs/reviewer-brief.md) - PyPI-published repository hygiene CLI.
+4. [scientific-computing-toolkit](https://github.com/stacknil/scientific-computing-toolkit/blob/main/docs/reviewer-brief.md) - SBOM/dependency risk review plus scientific diagnostics.
 
 ## Writing
 
