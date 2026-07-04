@@ -45,6 +45,19 @@ If you only have 5 minutes:
 3. [repo-sentinel-lite](https://github.com/stacknil/repo-sentinel-lite/blob/main/docs/reviewer-brief.md) - PyPI-published repository hygiene CLI.
 4. [scientific-computing-toolkit](https://github.com/stacknil/scientific-computing-toolkit/blob/main/docs/reviewer-brief.md) - SBOM/dependency risk review plus scientific diagnostics.
 
+## Review Questions
+
+Focused external review is welcome on:
+
+- parser coverage: are supported, skipped, and unsupported inputs visible?
+- artifact regeneration: do documented commands reproduce committed outputs?
+- schema contract: do machine-readable artifacts match their documented contracts?
+- documentation clarity: can a reviewer find evidence and boundaries without guessing?
+
+Please open a focused issue in the relevant repository and include the exact
+command, artifact, or sanitized example under review. Use synthetic or
+public-safe inputs only.
+
 ## Writing
 
 - [telemetry-lab / design notes](https://github.com/stacknil/telemetry-lab/blob/main/docs/design-notes.md)
