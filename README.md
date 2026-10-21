@@ -1,85 +1,74 @@
 # stacknil
 
-**Systems-oriented defensive security tooling for Linux evidence,
-product-security workflows, and software supply-chain review.**
+I build **C++ and Python tools for Linux evidence, repository hygiene, and
+software supply-chain review**. My focus is systems programming and defensive
+security: making inputs, decisions, and output contracts inspectable.
 
-I build narrow, local-first tools that turn system, repository, and dependency
-evidence into deterministic artifacts, bounded findings, and reproducible
-review paths.
+Start with the code below. The [portfolio website](https://stacknil.github.io/)
+adds selected engineering cases and a five-minute review route.
 
-Current focus:
+## Start with the code
 
-- Linux authentication and process/socket evidence, parser coverage, and telemetry bridges
-- deterministic detection and investigation workflows with schema-validated provenance
-- repository and dependency review gates with redaction, baselines, SARIF, and release evidence
+| Project | Engineering focus | Reproduce / inspect | Tagged release |
+| --- | --- | --- | --- |
+| [LogLens](https://github.com/stacknil/LogLens) | C++20 auth-log parsing, coverage telemetry, detection episodes, Markdown/JSON reports | [Reviewer path](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-path.md) | [v0.6.0](https://github.com/stacknil/LogLens/releases/tag/v0.6.0) |
+| [telemetry-lab](https://github.com/stacknil/telemetry-lab) | Five local detection/investigation demos, schema contracts, and run manifests | [Operator reproduction](https://github.com/stacknil/telemetry-lab/blob/main/docs/operator-reproduction.md) | [v1.2](https://github.com/stacknil/telemetry-lab/releases/tag/v1.2) |
+| [repo-sentinel-lite](https://github.com/stacknil/repo-sentinel-lite) | Heuristic repository scans, redaction, reviewed baselines, and changed-file gates | [Consumer setup](https://github.com/stacknil/repo-sentinel-lite/blob/main/docs/consumer-minimal-setup.md) | [v0.8.1](https://github.com/stacknil/repo-sentinel-lite/releases/tag/v0.8.1) |
+| [scientific-computing-toolkit](https://github.com/stacknil/scientific-computing-toolkit) | SBOM/dependency diffing with JSON, Markdown, SARIF, local policy, and optional provenance | [SBOM reviewer path](https://github.com/stacknil/scientific-computing-toolkit/blob/main/tools/sbom-diff-and-risk/docs/reviewer-path.md) | [v1.1.0](https://github.com/stacknil/scientific-computing-toolkit/releases/tag/v1.1.0) |
 
-Stable release evidence: [LogLens v0.6.0](https://github.com/stacknil/LogLens/releases/tag/v0.6.0) · [telemetry-lab v1.2](https://github.com/stacknil/telemetry-lab/releases/tag/v1.2) · [repo-sentinel-lite v0.8.1](https://github.com/stacknil/repo-sentinel-lite/releases/tag/v0.8.1) · [scientific-computing-toolkit v1.1.0](https://github.com/stacknil/scientific-computing-toolkit/releases/tag/v1.1.0) · [systems-foundations v0.3.0](https://github.com/stacknil/systems-foundations/releases/tag/v0.3.0)
+Supporting work:
 
-## Portfolio Map
+- [systems-foundations](https://github.com/stacknil/systems-foundations): four
+  saved-evidence Linux mini-labs, including a process-diff-to-JSONL adapter.
+  [Process workflow and tests](https://github.com/stacknil/systems-foundations/blob/main/projects/linux-process-observe/README.md)
+  · [tagged v0.3.0](https://github.com/stacknil/systems-foundations/releases/tag/v0.3.0).
+- [sec-writeups-public](https://github.com/stacknil/sec-writeups-public):
+  [security pattern cards](https://github.com/stacknil/sec-writeups-public/tree/main/patterns)
+  with supporting lab notes and Python publication checks.
 
-| Repo | Primary signal | Start here |
-| --- | --- | --- |
-| [LogLens](https://github.com/stacknil/LogLens) | C++20 Linux authentication evidence analysis with explicit parser uncertainty, multi-episode detections, and deterministic report contracts | [README](https://github.com/stacknil/LogLens/blob/main/README.md) · [reviewer path](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-path.md) · [reviewer brief](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-brief.md) |
-| [telemetry-lab](https://github.com/stacknil/telemetry-lab) | five local detection and investigation workflows with schema-validated artifacts, run manifests, and bounded AI assistance | [README](https://github.com/stacknil/telemetry-lab/blob/main/README.md) · [reviewer path](https://github.com/stacknil/telemetry-lab/blob/main/docs/reviewer-path.md) · [reviewer brief](https://github.com/stacknil/telemetry-lab/blob/main/docs/reviewer-brief.md) |
-| [repo-sentinel-lite](https://github.com/stacknil/repo-sentinel-lite) | PyPI-published product-security guardrail with redacted output, baseline-backed scans, changed-file gates, and fail-closed configuration | [README](https://github.com/stacknil/repo-sentinel-lite/blob/main/README.md) · [reviewer brief](https://github.com/stacknil/repo-sentinel-lite/blob/main/docs/reviewer-brief.md) |
-| [scientific-computing-toolkit](https://github.com/stacknil/scientific-computing-toolkit) | release-facing SBOM and dependency review with JSON, Markdown, and SARIF artifacts plus conservative policy and provenance evidence | [README](https://github.com/stacknil/scientific-computing-toolkit/blob/main/README.md) · [reviewer path](https://github.com/stacknil/scientific-computing-toolkit/blob/main/tools/sbom-diff-and-risk/docs/reviewer-path.md) · [reviewer brief](https://github.com/stacknil/scientific-computing-toolkit/blob/main/docs/reviewer-brief.md) |
-| [systems-foundations](https://github.com/stacknil/systems-foundations) | four Linux evidence mini-labs, including a versioned bridge from process/socket diffs to telemetry-lab-compatible JSONL | [README](https://github.com/stacknil/systems-foundations/blob/main/README.md) · [reviewer brief](https://github.com/stacknil/systems-foundations/blob/main/docs/reviewer-brief.md) |
-| [sec-writeups-public](https://github.com/stacknil/sec-writeups-public) | public-safe security pattern library with maturity, provenance, sanitization, and publication governance enforced in CI | [README](https://github.com/stacknil/sec-writeups-public/blob/main/README.md) · [reviewer brief](https://github.com/stacknil/sec-writeups-public/blob/main/docs/reviewer-brief.md) |
+Tag links describe released versions. The source and tests linked on main can
+include subsequent work. Detection demos remain local labs; scanner and policy
+outputs support review without certifying that a system or package is safe.
 
-## What Ties These Repos Together
+## Cross-repository engineering
 
-- Linux evidence -> telemetry and detection -> product and supply-chain security review
-- evidence -> normalization -> bounded judgment -> auditable artifact
-- schemas, compatibility notes, provenance, and release evidence are part of the tool contract
-- defensive scope and explicit non-goals matter more than inflated claims
+[Saved process evidence → telemetry aggregation](https://github.com/stacknil/telemetry-lab/blob/de542cb3cadba776c8e759f786152f9222fdfdb7/docs/case-study-process-evidence-to-telemetry.md)
+connects systems-foundations to telemetry-lab at pinned public commits.
+[PR #96](https://github.com/stacknil/telemetry-lab/pull/96) merged after v1.2.
+The article reports successful ingestion and aggregation with zero alerts;
+it does not establish detection efficacy. Code, fixtures, and producer goldens
+are public; full execution receipts remain privately retained.
 
-## What I'm Building Toward
+## Selected upstream contributions
 
-Monitoring, detection, and product-security engineering where defensive tools
-must be explainable, compatible with developer workflows, and reproducible by
-another engineer. The next depth comes from stronger Linux evidence handling,
-clearer telemetry contracts, and practical repository and supply-chain gates,
-not from expanding project count.
+Authored PRs, with status checked **20 October 2026**. Contribution scope is the
+linked diff; the upstream projects retain their own authorship and review process.
 
-## Publishing Discipline
+- **Open** — [microsoft/sarif-tools #115](https://github.com/microsoft/sarif-tools/pull/115):
+  preserve the full result description after a rule ID, with regression tests.
+- **Open** — [microsoft/sarif-tools #117](https://github.com/microsoft/sarif-tools/pull/117):
+  contextual filter-configuration diagnostics and advisory zero-match warnings.
+- **Open** — [ossf/pvtr-github-repo-scanner #513](https://github.com/ossf/pvtr-github-repo-scanner/pull/513):
+  return `NeedsReview` when check-suite/run evidence is incomplete, with Go regressions.
 
-Public repositories are treated as reviewable artifacts: sanitized inputs, explicit boundaries, deterministic outputs, tests where useful, and documentation that separates tool behavior from release or data claims.
+## Selected writing
 
-AI assistance may be used for implementation and documentation drafting, but public artifacts are reviewed through tests, deterministic outputs, explicit scope boundaries, and human-maintained release notes.
+- [LogLens: parser uncertainty as evidence](https://github.com/stacknil/LogLens/blob/main/docs/case-study-parser-uncertainty-as-evidence.md)
+- [telemetry-lab: evidence pipeline contracts](https://github.com/stacknil/telemetry-lab/blob/main/docs/evidence-pipeline-contract.md)
+- [systems-foundations: Linux notes](https://github.com/stacknil/systems-foundations/tree/main/notes/linux)
 
-Near-term focus: deepen evidence contracts, compatibility tests, and consumer reproduction across the existing portfolio.
+## Publishing and review
 
-## Reviewer Shortcut
+Public work uses sanitized fixtures, explicit input/output contracts, and
+reproduction commands. AI assistance may be used for implementation and drafting;
+tests, artifact inspection, and human review determine what is published.
 
-If you only have 5 minutes:
-
-1. [LogLens](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-path.md) - Linux auth evidence, parser uncertainty, and detection episode semantics.
-2. [telemetry-lab](https://github.com/stacknil/telemetry-lab/blob/main/docs/reviewer-path.md) - five local detection workflows, schema contracts, and provenance manifests.
-3. [repo-sentinel-lite](https://github.com/stacknil/repo-sentinel-lite/blob/main/docs/reviewer-brief.md) - PyPI product-security guardrail with redaction, baselines, and changed-file gates.
-4. [scientific-computing-toolkit](https://github.com/stacknil/scientific-computing-toolkit/blob/main/tools/sbom-diff-and-risk/docs/reviewer-path.md) - v1.1 SBOM/dependency review with SARIF, policy, and provenance evidence.
-
-## Review Questions
-
-Focused external review is welcome on:
-
-- parser coverage: are supported, skipped, and unsupported inputs visible?
-- provenance: can a reviewer trace generated artifacts to their committed inputs and configuration?
-- compatibility: are schema, report, and baseline changes explicit and tested?
-- policy boundary: does each warning say what it proves and what it does not prove?
-
-Please open a focused issue in the relevant repository and include the exact
-command, artifact, or sanitized example under review. Use synthetic or
-public-safe inputs only.
-
-## Writing
-
-- [LogLens / parser uncertainty as evidence](https://github.com/stacknil/LogLens/blob/main/docs/case-study-parser-uncertainty-as-evidence.md)
-- [telemetry-lab / evidence pipeline contract](https://github.com/stacknil/telemetry-lab/blob/main/docs/evidence-pipeline-contract.md)
-- [systems-foundations / 408 to Linux security](https://github.com/stacknil/systems-foundations/blob/main/notes/408-to-linux-security.md)
-- [sec-writeups-public / SBOM policy warning](https://github.com/stacknil/sec-writeups-public/blob/main/patterns/supply-chain/sbom-policy-warning.md)
+Focused issues are welcome on parser coverage, schema compatibility, provenance,
+or policy decisions. Include the exact command and a sanitized example in the
+relevant repository.
 
 ## Contact
 
-- GitHub: [@stacknil](https://github.com/stacknil)
-- Site: [stacknil.github.io](https://stacknil.github.io/)
-- Email: [stacknil@proton.me](mailto:stacknil@proton.me)
+[GitHub / stacknil](https://github.com/stacknil) ·
+[Website](https://stacknil.github.io/) ·
+[stacknil@proton.me](mailto:stacknil@proton.me)
