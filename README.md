@@ -11,17 +11,14 @@ adds selected engineering cases and a five-minute review route.
 
 | Project | Engineering focus | Reproduce / inspect | Tagged release |
 | --- | --- | --- | --- |
-| [LogLens](https://github.com/stacknil/LogLens) | C++20 auth-log parsing, coverage telemetry, detection episodes, Markdown/JSON reports | [Reviewer path](https://github.com/stacknil/LogLens/blob/main/docs/reviewer-path.md) | [v0.6.0](https://github.com/stacknil/LogLens/releases/tag/v0.6.0) |
-| [telemetry-lab](https://github.com/stacknil/telemetry-lab) | Five local detection/investigation demos, schema contracts, and run manifests | [Operator reproduction](https://github.com/stacknil/telemetry-lab/blob/main/docs/operator-reproduction.md) | [v1.2](https://github.com/stacknil/telemetry-lab/releases/tag/v1.2) |
+| [systems-foundations](https://github.com/stacknil/systems-foundations) | C++20 process supervision, Linux kernel controls and resource cleanup | [Execution boundary reviewer guide](https://github.com/stacknil/systems-foundations/blob/main/docs/execution-boundary-review.md) | [v0.4.0](https://github.com/stacknil/systems-foundations/releases/tag/v0.4.0) |
+| [LogLens](https://github.com/stacknil/LogLens) | C++20 parser correctness, stream completion and full-CLI memory measurements | [Parser qualification](https://github.com/stacknil/LogLens/blob/main/docs/validation/adversarial-qualification.md) | [v0.6.0](https://github.com/stacknil/LogLens/releases/tag/v0.6.0) |
+| [telemetry-lab](https://github.com/stacknil/telemetry-lab) | Five local detection/investigation demos, schema contracts, and run manifests | [Process evidence integration](https://github.com/stacknil/telemetry-lab/blob/main/docs/process-evidence-integration.md) | [v1.2](https://github.com/stacknil/telemetry-lab/releases/tag/v1.2) |
 | [repo-sentinel-lite](https://github.com/stacknil/repo-sentinel-lite) | Heuristic repository scans, redaction, reviewed baselines, and changed-file gates | [Consumer setup](https://github.com/stacknil/repo-sentinel-lite/blob/main/docs/consumer-minimal-setup.md) | [v0.8.1](https://github.com/stacknil/repo-sentinel-lite/releases/tag/v0.8.1) |
-| [scientific-computing-toolkit](https://github.com/stacknil/scientific-computing-toolkit) | SBOM/dependency diffing with JSON, Markdown, SARIF, local policy, and optional provenance | [SBOM reviewer path](https://github.com/stacknil/scientific-computing-toolkit/blob/main/tools/sbom-diff-and-risk/docs/reviewer-path.md) | [v1.1.0](https://github.com/stacknil/scientific-computing-toolkit/releases/tag/v1.1.0) |
+| [sbom-diff-and-risk](https://github.com/stacknil/scientific-computing-toolkit/tree/main/tools/sbom-diff-and-risk) | SBOM/dependency diffing with JSON, Markdown, SARIF, local policy, and optional provenance | [SBOM reviewer path](https://github.com/stacknil/scientific-computing-toolkit/blob/main/tools/sbom-diff-and-risk/docs/reviewer-path.md) | [v1.1.0](https://github.com/stacknil/scientific-computing-toolkit/releases/tag/v1.1.0) |
 
 Supporting work:
 
-- [systems-foundations](https://github.com/stacknil/systems-foundations): four
-  saved-evidence Linux mini-labs, including a process-diff-to-JSONL adapter.
-  [Process workflow and tests](https://github.com/stacknil/systems-foundations/blob/main/projects/linux-process-observe/README.md)
-  · [tagged v0.3.0](https://github.com/stacknil/systems-foundations/releases/tag/v0.3.0).
 - [sec-writeups-public](https://github.com/stacknil/sec-writeups-public):
   [security pattern cards](https://github.com/stacknil/sec-writeups-public/tree/main/patterns)
   with supporting lab notes and Python publication checks.
